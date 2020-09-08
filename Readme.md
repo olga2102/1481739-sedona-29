@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Ольга Якушина](https://up.htmlacademy.ru/htmlcss/29/user/1481739).
-* Наставник: [Александр Панасюк] (https://up.htmlacademy.ru/htmlcss/29/user/492311).
+* Наставник: [Александр Панасюк](https://up.htmlacademy.ru/htmlcss/29/user/492311).
 
 ---
 
