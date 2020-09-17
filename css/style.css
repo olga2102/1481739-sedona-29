@@ -2,6 +2,7 @@
 :root {
     --basic-white: #ffffff;
     --basic-black: #000000;
+    --basic-grey: #888888;;
     --basic-dark-grey: #333333;
     --basic-light-grey:#EEEEEE;
     --basic-extra-grey:#F2F2F2;
@@ -13,6 +14,8 @@
     --hover-blue:#669EC0;
     --pressing-blue:#5496BD;
     --details-grey:#A9A9A9;
+    --check-grey:#6A6A6A;
+    --hover-grey:#ABABAB;
 }
 
 body {
@@ -25,7 +28,7 @@ body {
     font-weight: 400;
     color: var(--basic-dark-grey);
     text-transform: uppercase;
-    background-color: var(--basic-white);
+    background-color: var(--basic-grey);
     background-image: url(img.jpg);
     background-position: top center;
     background-repeat: no-repeat;
@@ -39,6 +42,10 @@ body {
 img {
     max-width: 100%;
     height: auto;
+}
+
+.main-background {
+    background-color: var(--basic-white);
 }
 
 .main-nav {
@@ -68,6 +75,22 @@ img {
     line-height: 21px;
 }
 
+.features-list {
+    list-style: none;
+    font-size: 0;
+}
+
+.feature-city-items {
+    display: inline-block;
+}
+
+.feature-background {
+    background-color: var(--basic-light-grey);
+    width: 400px;
+    height: 256px;
+    display: inline-block;
+}
+
 .all-text {
     font-size: 14px;
     line-height: 21px; 
@@ -77,26 +100,28 @@ img {
     list-style: none;
 }
 
-.next-features {
-    color: var(--basic-white);
-    background-color: var(--basic-light-grey);
-}
-
 .question {
     font-size: 30px;
     line-height: 24px;
 }
 
-.really-city ,
+.really-city {
+    color: var(--basic-white);
+    background-color: var(--basic-blue);
+    background-image: url(Image1.png);
+    width: 400px;
+    height: 256px;
+  }
+
 .bridge {
   color: var(--basic-white);
   background-color: var(--basic-blue);
-  background-image: url(Image.png);
+  background-image: url(Image2.png);
   width: 400px;
   height: 256px;
-  align-items: center;
-  text-align: center;
 }
+
+page-footer
 
 .footer-contacts {
     font-size: 21px;
