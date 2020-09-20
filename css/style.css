@@ -122,11 +122,13 @@ img {
 .best-city {
     font-size: 21px;
     line-height: 26px;
+    text-align: center;
 }
 
 .advantages {
     font-size: 14px;
     line-height: 26px;
+    text-align: center;
 }    
 
 .feature-item {
@@ -164,6 +166,7 @@ img {
 .question {
     font-size: 30px;
     line-height: 24px;
+    text-align: center;
 }
 
 .really-city {
