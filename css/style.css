@@ -14,6 +14,7 @@
     --hover-blue:#669EC0;
     --pressing-blue:#5496BD;
     --details-grey:#A9A9A9;
+    --rating-grey: #666666;
     --check-grey:#6A6A6A;
     --hover-grey:#ABABAB;
 }
@@ -26,7 +27,7 @@ body {
     font-size: 14px;
     line-height: 21px;
     font-weight: 400;
-    color: var(--basic-dark-grey);
+    color: var(--basic-black);
     text-transform: uppercase;
     background-color: var(--basic-grey);
     background-image: url(img.jpg);
@@ -34,7 +35,7 @@ body {
     background-repeat: no-repeat;
 }
 
-.page a {
+a {
     text-decoration: none;
     color: var(---basic-black); 
 }
@@ -60,19 +61,80 @@ img {
     color: var(---basic-black);
 }
 
+.site-nav-current {
+    font-size: 14px;
+    line-height: 26px;
+    color: var(--basic-brown);
+}
+
+.site-nav a:hover {
+    color:  var(--basic-blue);
+}
+
+.site-nav a:active {
+    color:(---basic-black);
+    opacity: 0.3;
+}
+.result {
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: bold;
+}
+
+.option {
+    list-style: none;
+}
+
+.sort {
+    font-size: 12px;
+    line-height: 18px; 
+}
+
+.sort-by-price,
+.sort-by-type,
+.sort-by-rating {
+    font-size: 12px;
+    line-height: 18px;
+    opacity: 0.3;
+    text-decoration: underline dashed;
+}
+
+.sort-by-price:hover,
+.sort-by-type:hover,
+.sort-by-rating:hover {
+    color: var(--basic-blue);
+}
+
+.sort-by-price:active,
+.sort-by-type:active,
+.sort-by-rating:active {
+    color: var(--basic-black);
+    opacity:1;
+    text-decoration: none;
+}
+
+.sort-current {
+    color: var(--basic-blue);
+    text-decoration: none;
+}
+
+
 .best-city {
     font-size: 21px;
     line-height: 26px;
+    text-align: center;
 }
 
 .advantages {
     font-size: 14px;
     line-height: 26px;
+    text-align: center;
 }    
 
 .feature-item {
     font-size: 21px;
     line-height: 21px;
+    text-align: center;
 }
 
 .features-list {
@@ -94,6 +156,7 @@ img {
 .all-text {
     font-size: 14px;
     line-height: 21px; 
+    text-align: center;
 }
 
 .feature-city {
@@ -103,6 +166,7 @@ img {
 .question {
     font-size: 30px;
     line-height: 24px;
+    text-align: center;
 }
 
 .really-city {
@@ -121,7 +185,70 @@ img {
   height: 256px;
 }
 
-page-footer
+.hotels-list {
+    list-style: none;
+}
+
+.hotel-name {
+    font-weight: bold;
+    font-size: 21px;
+    line-height: 26px;
+}
+
+.hotel-name:hover {
+color: var(--basic-blue);
+}
+
+.hotel-name:active {
+    opacity: 0.3;
+    color: var(--basic-black);
+    }
+
+.type, .price {
+    font-size: 14px;
+line-height: 21px;
+color: var(--basic-dark-grey);
+}
+
+.rating {
+    font-size: 14px;
+    line-height: 21px;
+    color: var(--rating-grey); 
+    background-color: var(--basic-extra-grey);
+}
+
+.description {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 21px;
+    color: var(--basic-white);
+    background-color: var(--basic-blue);
+}
+
+.description:hover {
+    background-color: var(--hover-blue);
+}
+.description:active {
+    background-color: var(--pressing-blue);
+    opacity: 0.3;
+}
+
+
+.book {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 21px;
+    color: var(--basic-white);
+    background-color: var(--basic-brown);
+}
+
+.book:hover {
+    background-color: var(--hover-brown); 
+}
+
+.book:active {
+    background-color: var(--pressing-brown); 
+}
 
 .footer-contacts {
     font-size: 21px;
