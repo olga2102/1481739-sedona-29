@@ -89,7 +89,6 @@ img {
     padding: 0;
     display: grid;
     grid-template-columns: 264px 264px 264px 264px;
-    outline-offset: -5px;
     color: var(---basic-black);
 }
 
@@ -114,9 +113,10 @@ img {
 }
 
 .map,
-.hotels {
+.hotels-option {
     text-align: right;
 }
+
 .result {
     font-size: 21px;
     line-height: 26px;
@@ -125,11 +125,15 @@ img {
 
 .option {
     list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-content: start;
 }
 
 .sort {
     font-size: 12px;
     line-height: 18px; 
+    margin: 0;
 }
 
 .sort-by-price,
@@ -230,6 +234,8 @@ img {
 
 .hotels-list {
     list-style: none;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
 }
 
 .hotel-name {
