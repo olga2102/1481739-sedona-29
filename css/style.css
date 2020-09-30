@@ -57,6 +57,7 @@ img {
   }
 
 .main-background {
+    width: 1200px;
     margin: 0 auto;
     background-color: var(--basic-white);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 5px 15px rgba(0, 1, 1, 0.2);
@@ -67,9 +68,9 @@ img {
   }
 
 .main-header-logo {
-    justify-self: center;
     position: absolute;
-    right: 530px; 
+    left: 50%; 
+    transform: translateX(-50%);
 }
 
 .main-nav {
@@ -88,10 +89,20 @@ img {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: space-around;
     align-content: flex-start;
     width: 100%;
     color: var(---basic-black);
+}
+
+.site-nav li {
+    flex-grow: 1;
+    width: 264px;
+}
+
+.hotels-option, .map {
+    text-align: right;
 }
 
 .site-nav-current {
@@ -283,7 +294,6 @@ img {
 
 .hotels-list {
     list-style: none;
-    width: 1200px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -294,7 +304,6 @@ img {
     display: grid;
     grid-template-columns: 208px 145px 142px auto;
     grid-template-rows: auto auto auto;
-    width: 1200px;
     align-items: start;
     padding-top: 23.5px;
     padding-bottom: 30px;
@@ -323,6 +332,7 @@ img {
     line-height: 26px;
     margin: 0;
     padding-left: 29px;
+    margin-top: -4px;
 }
 
 .hotel-name:hover {
