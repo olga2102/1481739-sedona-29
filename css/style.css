@@ -19,6 +19,7 @@
     --hover-grey:#ABABAB;
     --border-grey: #E5E5E5;
     --copyright-grey: #BDBBBC;
+    --opacity-white: rgb(255,255,255,0.3);
 }
 
 body {
@@ -64,12 +65,12 @@ img {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 5px 15px rgba(0, 1, 1, 0.2);
 }
 
-.main-header {
+.main-header-index {
     position: relative;
     padding-bottom: 509px;
   }
 
-  .main-header::before {
+  .main-header-index::before {
     content: ''; 
     position: absolute;
     left: 0;
@@ -80,6 +81,10 @@ img {
     url("../img/sedona-main-picture.jpg");
     background-position: center;
     background-repeat: no-repeat;
+}
+
+.main-header {
+    position: relative;
 }
 
 .main-header-logo {
@@ -154,15 +159,19 @@ img {
 
 .visually-hidden {
     position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.searcing-results {
+    margin-top: 29px;
 }
 
 .result {
@@ -185,6 +194,44 @@ img {
 .version {
     display: flex;
     align-content: center;
+    position: relative;
+    margin-bottom: 31px;
+}
+
+.version-current-state::after {
+    content: ''; 
+    position: absolute;
+    width: 130px;
+    height: 15px;
+    right: 73px;
+    background-image: url("../img/triangle-not-active.svg"),
+    url(../img/triangle-rotate-active.svg);
+    background-repeat: no-repeat;
+    background-position-x:  103px, 120px;
+}
+
+.version-current-state:hover::after {
+    content: ''; 
+    position: absolute;
+    width: 130px;
+    height: 15px;
+    right: 73px;
+    background-image: url("../img/triangle-hover.svg"),
+    url(../img/triangle-rotate-hover.svg);
+    background-repeat: no-repeat;
+    background-position-x:  103px, 120px;
+}
+
+.version-current-state:active::after {
+    content: ''; 
+    position: absolute;
+    width: 130px;
+    height: 15px;
+    right: 73px;
+    background-image: url("../img/triangle-active.svg"),
+    url(../img/triangle-rotate-active.svg);
+    background-repeat: no-repeat;
+    background-position-x:  103px, 120px;
 }
 
 .result {
@@ -501,6 +548,75 @@ img {
     color: var(--basic-black);
 }
 
+.evaluation-Amara {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    align-self: start;
+    justify-self: end;
+    margin: 0;
+    margin-right: 73px;
+}
+
+.evaluation-Amara::before {
+    content: "";
+    display: flex;
+    width: 150px;
+    height: 17px;
+    background-image: url(../img/star.svg),
+    url(../img/star.svg),
+    url(../img/star.svg),
+    url(../img/star.svg);
+    background-repeat: no-repeat;
+    background-position-x: 58px, 82px, 106px, 130px;
+}
+
+.evaluation-Desert {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    align-self: start;
+    justify-self: end;
+    margin: 0;
+    margin-right: 73px;
+}
+
+.evaluation-Desert::before {
+    content: "";
+    display: flex;
+    width: 150px;
+    height: 17px;
+    background-image: url(../img/star.svg),
+    url(../img/star.svg),
+    url(../img/star.svg);
+    background-repeat: no-repeat;
+    background-position-x: 82px, 106px, 130px;
+}
+
+.evaluation-Villas {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    align-self: start;
+    justify-self: end;
+    margin: 0;
+    margin-right: 73px;
+}
+
+.evaluation-Villas::before {
+    content: "";
+    display: flex;
+    width: 150px;
+    height: 17px;
+    background-image: url(../img/star.svg),
+    url(../img/star.svg);
+    background-repeat: no-repeat;
+    background-position-x: 106px, 130px;
+}
+
 .type, .price {
     font-size: 14px;
     line-height: 21px;
@@ -564,6 +680,8 @@ img {
     align-self: end;
     justify-self: end;
     flex-grow: 1;
+    padding-left: 15px;
+    padding-right: 12px;
 }
 
 .description {
@@ -581,7 +699,7 @@ img {
 }
 .description:active {
     background-color: var(--pressing-blue);
-    opacity: 0.3;
+    color: var(--opacity-white)
 }
 
 .book {
@@ -599,6 +717,7 @@ img {
 
 .book:active {
     background-color: var(--pressing-brown); 
+    color: var(--opacity-white)
 }
 
 .page-footer {
@@ -748,25 +867,16 @@ img {
     align-items: center;
 }
 
-.button {
-    display: inline-block;
-    width: 115px;
-    height: 41px;
-    background-image: url("../img/logo-htmlacademy.svg");
-    background-position: right;
-    background-repeat: no-repeat;
-    font-size: 14px;
-    line-height: 26px;
-    margin: 0;
-    margin-left: 6px;
+.copyright {
+    margin-right: 8px;
 }
 
-.button:hover {
-    color: var(--basic-blue);
+.button:hover path{
+    fill: var(--basic-blue);
 }
 
-.footer-copyright a:active {
-    color: var(--copyright-grey);
+.button:active path{
+    fill: var(--copyright-grey);
 }
 
 
