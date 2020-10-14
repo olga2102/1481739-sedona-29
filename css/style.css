@@ -143,6 +143,10 @@ img {
     background-repeat: no-repeat;
 } 
 
+.hotels-option {
+    color: var(--basic-brown);
+}
+
 .hotels-option, .map {
     text-align: right;
 }
@@ -212,6 +216,10 @@ img {
     margin-bottom: 25px;
 }
 
+.filter-option:last-child {
+    margin-bottom: 0;
+} 
+
 .filter-option label{
     position: relative;
     display: block;
@@ -228,9 +236,9 @@ img {
     background-image: url(../img/checkbox-off.svg);
     background-repeat: no-repeat;
     background-position: 0 0;
-  }
+}
 
-  .filter-input-checkbox:checked + label::before {
+.filter-input-checkbox:checked + label::before {
     content: "";
     position: absolute;
     top: 0;
@@ -240,7 +248,32 @@ img {
     background-image: url(../img/checkbox-on.svg);
     background-repeat: no-repeat;
     background-position: 0 0;
-  }
+}
+
+.filter-input-checkbox:disabled + label::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -40px;
+    width: 27px;
+    height: 23px;
+    background-image: url(../img/checkbox-off-disabled.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.filter-input-checkbox:checked:disabled + label::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -40px;
+    width: 27px;
+    height: 23px;
+    background-image: url(../img/checkbox-on-disabled.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
 
 .checkbox-filter {
     display: flex;
@@ -361,6 +394,7 @@ img {
 
 .searcing-results {
     margin-top: 29px;
+    margin-bottom: 31px;
 }
 
 .result {
@@ -390,7 +424,6 @@ img {
     display: flex;
     align-content: center;
     position: relative;
-    margin-bottom: 31px;
     margin-right: 73px;
     margin-left: 73px;
 }
@@ -780,7 +813,7 @@ img {
     grid-template-columns: 208px 145px 142px auto;
     grid-template-rows: auto auto auto;
     align-items: start;
-    padding-top: 23.5px;
+    padding-top: 30px;
     padding-bottom: 30px;
     border: 1px solid var(--border-grey);
 }
@@ -798,7 +831,6 @@ img {
     grid-column-end: 4;
     grid-row-start: 1;
     grid-row-end: 2;
-    margin-bottom: 7px;
 }
 
 .hotel-name {
@@ -808,6 +840,7 @@ img {
     margin: 0;
     margin-left: 29px;
     margin-top: -4px;
+    margin-bottom: 7px;
 }
 
 .hotel-name:hover {
@@ -873,6 +906,21 @@ img {
     padding-bottom: 3px;
     padding-left: 17px;
     padding-right: 16px;
+    align-self: end;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 21px;
+    color: var(--basic-white);
+    background-color: var(--basic-blue);
+    margin-right: 6px;
+}
+
+.description:hover {
+    background-color: var(--hover-blue);
+}
+.description:active {
+    background-color: var(--pressing-blue);
+    color: var(--opacity-white)
 }
 
 .book {
@@ -904,24 +952,8 @@ img {
     flex-grow: 1;
     padding-left: 15px;
     padding-right: 12px;
-}
-
-.description {
-    align-self: end;
-    font-weight: bold;
-    font-size: 14px;
-    line-height: 21px;
-    color: var(--basic-white);
-    background-color: var(--basic-blue);
-    margin-right: 6px;
-}
-
-.description:hover {
-    background-color: var(--hover-blue);
-}
-.description:active {
-    background-color: var(--pressing-blue);
-    color: var(--opacity-white)
+    padding-top: 3px;
+    padding-bottom: 3px;
 }
 
 .book {
@@ -982,111 +1014,41 @@ img {
 
 .social-button_1 {
     margin-right: 6px;
-}
-
-.social-button_1::before {
-    content: "";
-    display: inline-block;
-    width: 46px;
-    height: 48px;
-    background-color: var(--basic-blue); 
-    background-image: url("../img/twitter.png");
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.social-button_1:hover::before {
-    content: "";
-    width: 46px;
-    height: 48px;
-    background-color: var(--hover-blue); 
-    background-image: url("../img/twitter.png");
-    background-position: center;
-    background-repeat: no-repeat; 
-} 
-
-.social-button_1:active::before {
-    content: "";
-    width: 46px;
-    height: 48px;
-    background-color: var(--pressing-blue); 
-    background-image: url("../img/twitter.png");
-    background-position: center;
-    background-repeat: no-repeat; 
-} 
-
-.social-button_2 {
-    margin-right: 6px;
-}
-
-.social-button_2::before {
-    content: "";
-    display: inline-block;
+    display: flex;
     width: 46px;
     height: 48px;
     background-color: var(--basic-blue);
-    background-image: url("../img/fb-icon.png");
-    background-position: center;
-    background-repeat: no-repeat;
+    align-items: center;
+    justify-content: center;
 }
 
-.social-button_2:hover::before {
-    content: "";
-    display: inline-block;
-    width: 46px;
-    height: 48px;
+.social-button_1:hover, .social-button_2:hover, .social-button_3:hover path {
     background-color: var(--hover-blue);
-    background-image: url("../img/fb-icon.png");
-    background-position: center;
-    background-repeat: no-repeat;
 }
 
-.social-button_2:active::before {
-    content: "";
-    display: inline-block;
+.social-button_1:active, .social-button_2:active, .social-button_3:active path {
+    background-color: var(--pressing-blue);
+    fill-opacity: 0.3;
+}
+
+.social-button_2 {
+    margin-right: 6px;
+    display: flex;
     width: 46px;
     height: 48px;
-    background-color: var(--pressing-blue);
-    background-image: url("../img/fb-icon.png");
-    background-position: center;
-    background-repeat: no-repeat;
+    background-color: var(--basic-blue);
+    align-items: center;
+    justify-content: center;
 }
 
 .social-button_3 {
     margin-right: 6px;
-}
-
-.social-button_3::before {
-    content: "";
-    display: inline-block;
+    display: flex;
     width: 46px;
-     height: 48px;
+    height: 48px;
     background-color: var(--basic-blue);
-    background-image: url("../img/youtube.png");
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.social-button_3:hover::before {
-    content: "";
-    display: inline-block;
-    width: 46px;
-    height: 48px;
-    background-color: var(--hover-blue);
-    background-image: url("../img/youtube.png");
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.social-button_3:active::before {
-    content: "";
-    display: inline-block;
-    width: 46px;
-    height: 48px;
-    background-color: var(--pressing-blue);
-    background-image: url("../img/youtube.png");
-    background-position: center;
-    background-repeat: no-repeat;
+    align-items: center;
+    justify-content: center;
 }
 
 .footer-copyright {
@@ -1110,6 +1072,8 @@ img {
 .button:active path{
     fill: var(--copyright-grey);
 }
+
+/* Form */
 
 .search-for-hotel {
     position: relative;
