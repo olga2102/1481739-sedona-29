@@ -1288,14 +1288,15 @@ input[type="text"] {
     width: 11px;
     height: 3px;
     top: 50%;
-    left: 30%;
+    left: 50%;
+    transform: translateX(-50%);
     background-color: var(--details-grey);
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .button-plus::before {
-    transform: rotate(90deg);
+    transform: translateX(-50%) rotate(90deg);
 }
 
 .button-minus:hover::after, .button-plus:hover::before, .button-plus:hover::after {
