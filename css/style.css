@@ -1,6 +1,7 @@
 /* Variables */
 :root {
     --basic-white: #ffffff;
+    --white-footer: rgba(255,255,255,0.9);
     --basic-black: #000000;
     --basic-grey: #F2F2F2;;
     --basic-dark-grey: #333333;
@@ -51,7 +52,7 @@ img {
     height: 100%;
 }  
 
-  .page-body {
+.page-body {
     min-height: 100%;
     display: grid;
     grid-template-rows: min-content 1fr min-content;
@@ -71,7 +72,7 @@ img {
     padding-bottom: 509px;
 }
 
-  .main-header-index::before {
+.main-header-index::before {
     content: ''; 
     position: absolute;
     left: 0;
@@ -80,6 +81,7 @@ img {
     height: 509px;
     background-image: url("../img/welcome_sedona.png"),
     url("../img/sedona-main-picture.jpg");
+    background-color: var(--basic-blue);
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -193,6 +195,8 @@ img {
     color: var(--basic-white);
     background-image: url(../img/background-catalog.png);
     background-color: var(--basic-blue);
+    background-repeat: no-repeat;
+    background-size: cover;
     box-sizing: border-box;
     min-height: 217px;
 }
@@ -242,6 +246,8 @@ img {
 }
 
 .filter-input-checkbox:checked + label::before {
+    width: 27px;
+    height: 23px;
     background-image: url(../img/checkbox-on.svg);
 }
 
@@ -253,7 +259,8 @@ img {
     background-image: url(../img/checkbox-on-disabled.svg);
 }
 
-.filter-input-checkbox:checked:focus + label::before, .filter-input-checkbox:focus + label::before {
+.filter-input-checkbox:checked:focus + label::before,
+.filter-input-checkbox:focus + label::before {
     border: 2px solid var(--basic-black)
 }
 
@@ -345,10 +352,11 @@ img {
     cursor: pointer;
 }
 
-.switch1:hover, .switch2:hover {
+.switch1:hover,
+.switch2:hover {
     width: 23px;
     height: 24px;
-    background-image:url(../img/filter-button\ -hover.svg);
+    background-image:url(../img/filter-button-hover.svg);
 }
 
 .button-for-filter {
@@ -411,11 +419,6 @@ img {
 
 .triangle {
     padding: 0;
-    border: none;
-    width: 0;
-    height: 0;
-    font: inherit;
-    color: inherit;
     background-color: transparent;
     width: 0;
 	height: 0;
@@ -429,11 +432,6 @@ img {
 
 .triangle-reverse {
     padding: 0;
-    border: none;
-    width: 0;
-    height: 0;
-    font: inherit;
-    color: inherit;
     background-color: transparent;
     width: 0;
 	height: 0;
@@ -459,7 +457,8 @@ img {
     border-color: var(--basic-blue) transparent transparent  transparent;
 }
 
-.triangle:focus, .triangle-reverse:focus {
+.triangle:focus,
+.triangle-reverse:focus {
     outline: 3px solid var(--pressing-blue);
 }
 
@@ -741,10 +740,8 @@ img {
     position: relative;
     color: var(--basic-white);
     background-color: var(--basic-blue);
-    width: 300px;
+    width: 400px;
     min-height: 256px;
-    padding-left: 51px;
-    padding-right: 49px;
 }
 
 .real-city .feature-item {
@@ -753,7 +750,9 @@ img {
 
 .about-real-city {
     margin-top: 23px;
+    margin-right: 51px;
     margin-bottom: 52px;
+    margin-left: 50px;
 }
 
 .real-city::after {
@@ -763,9 +762,11 @@ img {
     top: 0;
     left: 100%;
     width: 800px;
-    height: 256px;
+    height: 100%;
     background-image: url("../img/picture_city.jpg");
+    background-color: var(--basic-blue);
     background-repeat: no-repeat;
+    background-size: cover;
     background-position: 0 0;
 }
 
@@ -790,7 +791,9 @@ img {
     width: 800px;
     height: 256px;
     background-image: url("../img/picture_bridge.jpg");
+    background-color: var(--basic-blue);
     background-repeat: no-repeat;
+    background-size: cover;
     background-position: 0 0;
 }
 
@@ -994,8 +997,7 @@ img {
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: var(--basic-white);
-    opacity: 0.9;
+    background-color: var(--white-footer);
 }
 
 .footer-contacts {
@@ -1044,11 +1046,15 @@ img {
     justify-content: center;
 }
 
-.social-button_1:hover, .social-button_2:hover, .social-button_3:hover {
+.social-button_1:hover,
+.social-button_2:hover,
+.social-button_3:hover {
     background-color: var(--hover-blue);
 }
 
-.social-button_1:active, .social-button_2:active, .social-button_3:active {
+.social-button_1:active,
+.social-button_2:active,
+.social-button_3:active {
     background-color: var(--pressing-blue);
     fill-opacity: 0.3;
 }
@@ -1121,7 +1127,7 @@ img {
     font-weight: bold;
     color: var(--basic-white);
     background-color: var(--basic-brown);
-    padding: 28px 0 28px 0;
+    padding: 30px 0 30px 0;
     margin: 0 auto;
     width: 100%;
     text-transform: uppercase;
@@ -1207,7 +1213,8 @@ input[type="text"] {
     text-align: center;
 }
 
-.searching-date input, .searching-amount input {
+.searching-date input,
+.searching-amount input {
     border: none;
     font-size: 14px;
     line-height: 26px;
@@ -1253,7 +1260,8 @@ input[type="text"] {
     width: 180px;
 }
 
-.button-adults, .button-children {
+.button-adults,
+.button-children {
     display: flex;
 }
 
@@ -1282,7 +1290,8 @@ input[type="text"] {
     background-color: var(--basic-grey);
 }
 
-.button-plus::before, .button-plus::after {
+.button-plus::before,
+.button-plus::after {
     content: "";
     position: absolute;
     width: 11px;
@@ -1299,19 +1308,25 @@ input[type="text"] {
     transform: translateX(-50%) rotate(90deg);
 }
 
-.button-minus:hover::after, .button-plus:hover::before, .button-plus:hover::after {
+.button-minus:hover::after,
+.button-plus:hover::before,
+.button-plus:hover::after {
     background-color: var(--basic-black); 
 } 
 
-.button-minus:active::after, .button-plus:active::before, .button-plus:active::after {
+.button-minus:active::after,
+.button-plus:active::before,
+.button-plus:active::after {
     background-color: var(--basic-blue); 
 } 
 
-.searching-date input:hover, .searching-amount input:hover {
+.searching-date input:hover,
+.searching-amount input:hover {
     background-color: var(--special-light-grey);
 }
 
-.searching-date input:focus, .searching-amount input:focus {
+.searching-date input:focus,
+.searching-amount input:focus {
     background-color: var(--basic-white);
 }
 
