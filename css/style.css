@@ -79,7 +79,7 @@ img {
     top: 55px;
     width: 1200px;
     height: 509px;
-    background-image: url("../img/welcome_sedona.png"),
+    background-image: url("../img/welcome-sedona.png"),
     url("../img/sedona-main-picture.jpg");
     background-color: var(--basic-blue);
     background-position: center;
@@ -139,7 +139,7 @@ img {
     bottom: calc(100% - 1px);
     width: 100%;
     height: 57px;
-    background-image: url("../img/white_background.svg");
+    background-image: url("../img/white-background.svg");
     background-repeat: no-repeat;
 } 
 
@@ -261,7 +261,7 @@ img {
 
 .filter-input-checkbox:checked:focus + label::before,
 .filter-input-checkbox:focus + label::before {
-    border: 2px solid var(--basic-black)
+    outline: 2px solid var(--basic-black)
 }
 
 .checkbox-filter {
@@ -598,7 +598,7 @@ img {
     right: 162px;
     width: 75px;
     height: 72px;
-    background-image: url("../img/icon_apartments.svg");
+    background-image: url("../img/icon-apartments.svg");
     background-repeat: no-repeat;
 }
 
@@ -621,7 +621,7 @@ img {
     right: 162px;
     width: 75px;
     height: 70px;
-    background-image: url("../img/icon_food.svg");
+    background-image: url("../img/icon-food.svg");
     background-repeat: no-repeat;
 }
 
@@ -644,7 +644,7 @@ img {
     right: 168px;
     width: 64px;
     height: 77px;
-    background-image: url("../img/icon_souvenirs.svg");
+    background-image: url("../img/icon-souvenirs.svg");
     background-repeat: no-repeat;
 }
 
@@ -750,9 +750,9 @@ img {
 
 .about-real-city {
     margin-top: 23px;
-    margin-right: 51px;
+    margin-right: 49px;
     margin-bottom: 52px;
-    margin-left: 50px;
+    margin-left: 48px;
 }
 
 .real-city::after {
@@ -763,7 +763,7 @@ img {
     left: 100%;
     width: 800px;
     height: 100%;
-    background-image: url("../img/picture_city.jpg");
+    background-image: url("../img/picture-city.jpg");
     background-color: var(--basic-blue);
     background-repeat: no-repeat;
     background-size: cover;
@@ -789,8 +789,8 @@ img {
     top: 0;
     right: 100%;
     width: 800px;
-    height: 256px;
-    background-image: url("../img/picture_bridge.jpg");
+    height: 100%;
+    background-image: url("../img/picture-bridge.jpg");
     background-color: var(--basic-blue);
     background-repeat: no-repeat;
     background-size: cover;
