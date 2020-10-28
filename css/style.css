@@ -1173,7 +1173,7 @@ img {
     margin-top: 29px;
 }
 
-.searching-date::after {
+.calendar {
     content: "";
     position: absolute;
     display: block;
@@ -1185,12 +1185,16 @@ img {
     background-repeat: no-repeat;
 }
 
-.searching-date:hover::after {
+.calendar:hover {
     background-image: url("../img/calendar-hover.svg");
 }
 
-.searching-date:active::after {
+.calendar:active {
     background-image: url("../img/calendar-active.svg");
+}
+
+.calendar:focus {
+    outline: 2px solid var(--basic-black);
 }
 
 .searching-date input {
