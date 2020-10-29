@@ -21,6 +21,7 @@
     --border-grey: #E5E5E5;
     --copyright-grey: #BDBBBC;
     --opacity-white: rgb(255,255,255,0.3);
+    --opacity-black:  rgb(0,0,0,0.3);
     --triangle-grey: #CACACA;
 }
 
@@ -325,7 +326,7 @@ img {
 }
 
 .part-of-range {
-    width: 248px;
+    width: 252px;
     height: 2px;
     background-color: var(--basic-white);
 }
@@ -403,7 +404,6 @@ img {
     display: flex;
     flex-wrap: wrap;
     justify-content: start; 
-    align-content: end;
     margin-top: 0;
     margin-bottom: 0;
     padding-left: 0;
@@ -478,12 +478,14 @@ img {
 
 .type-of-hotel, 
 .type-of-rating {
-    opacity: 0.3;
+    background-image: url(../img/line-by-rating.svg);
+    background-repeat: repeat-x;
+    background-position-y: bottom;
+    color: var(--opacity-black);
+    padding-bottom: 2px;
 }
 
-.sort-by-price,
-.sort-by-type,
-.sort-by-rating {
+.sort-item {
     font-size: 12px;
     line-height: 21px;
     margin-right: 33px;
@@ -493,57 +495,25 @@ img {
 .type-of-hotel:hover,
 .type-of-rating:hover {
     color: var(--basic-blue);
-    opacity: 1;
+}
+
+.type-of-price:hover {
+    background-image: url(../img/line-by-rating.svg);
+    background-repeat: repeat-x;
+    background-position-y: bottom;
+    padding-bottom: 2px;
 }
 
 .type-of-price:active,
 .type-of-hotel:active,
 .type-of-rating:active {
     color: var(--basic-black);
-    opacity:1;
-    text-decoration: none;
+    background: none;
 }
 
 .option .sort-current {
     color: var(--basic-blue);
-    opacity: 1;
 }
-
-.sort-by-type {
-    background-image: url(../img/line-by-type.svg);
-    background-repeat: no-repeat;
-    background-position-y: bottom;
-}
-
-.sort-by-rating {
-    background-image: url(../img/line-by-rating.svg);
-    background-repeat: no-repeat;
-    background-position-y: bottom;
-}
-
- /* .sort-by-type::after {
-    position: absolute;
-    content: "";
-    width: 52px;
-    height: 1px;
-    top: 20px;
-    background-image: url(../img/line-by-type.svg);
-    background-repeat: no-repeat;
-    left: 0;
-    bottom: 5px;
-}
-
-.sort-by-rating::after {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 1px;
-    top: 20px;
-    background-image: url(../img/line-by-rating.svg);
-    background-repeat: no-repeat;
-    left: 0;
-    bottom: 5px;
-} */
 
 .best-city {
     font-size: 21px;
@@ -867,6 +837,8 @@ img {
     grid-column-end: 4;
     grid-row-start: 1;
     grid-row-end: 2;
+    display: inline-block;
+    margin-right: auto;
 }
 
 .hotel-name {
