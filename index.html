@@ -6,7 +6,7 @@
   <title>HTML Academy: Седона</title>
   <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
   <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/style.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body class="page-body">
@@ -43,7 +43,7 @@
           <li class="features-list-item features-list-item_type_sedona">
             <div class="real-city">
               <h3 class="feature-item">Настоящий городок</h3>
-              <p class="all-text">- №1 -</p>
+              <p class="all-text">&mdash; №1 &mdash;</p>
               <p class="all-text about-real-city">Седона - не аттракцион для туристов, там течет своя жизнь</p>
             </div>
             <ul class="feature-city">
@@ -64,23 +64,23 @@
           <li class="features-list-item features-list-item_type_bridge">
             <div class="bridge">
               <h3 class="feature-item">Там есть мост дьявола</h3>
-              <p class="all-text">- №2 -</p>
+              <p class="all-text">&mdash; №2 &mdash;</p>
               <p class="all-text about-bridge">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
             </div>
           </li>
           <li class="features-list-item features-list-item_type_place">
             <h3 class="feature-item">Небольшая площадь</h3>
-            <p class="all-text">- №3 -</p>
+            <p class="all-text">&mdash; №3 &mdash;</p>
             <p class="all-text about-place">Все достопримечательности находятся очень близко</p>
           </li>
           <li class="features-list-item features-list-item_type_path">
             <h3 class="feature-item">Красивая дорога</h3>
-            <p class="all-text">- №4 -</p>
+            <p class="all-text">&mdash; №4 &mdash;</p>
             <p class="all-text about-path">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
           </li>
           <li class="features-list-item features-list-item_type_tourists">
             <h3 class="feature-item">Мало туристов</h3>
-            <p class="all-text">- №5 -</p>
+            <p class="all-text">&mdash; №5 &mdash;</p>
             <p class="all-text about-everyone">Большинство едет в Гранд Каньон и толпится там</p>
           </li>
         </ul>
@@ -93,33 +93,35 @@
         </p>
         <div class="search-for-hotel">
           <div class="searching-wrapper">
-            <a href="blank.html" class="searching-header button-close">Поиск гостиницы в Седоне</a>
+            <button type="button" class="searching-header button-close">Поиск гостиницы в Седоне</button>
             <form target="_blank" class="searching-form modal" action="https://echo.htmlacademy.ru/" method="get">
               <p class="searching-date date-in">
                 <label for="date-in">Дата заезда:</label>
                 <input type="text" name="date" id="date-in" value="24 апреля 2017">
-                <a href="blank.html" class="calendar"></a>
+                <button type="button" class="calendar" aria-label="Выбрать дату заезда в календаре"></button>
               </p>
               <p class="searching-date date-out">
                 <label for="date-out">Дата выезда:</label>
                 <input type="text" name="date" id="date-out" value="4 июля 2017">
-                <a href="blank.html" class="calendar"></a>
+                <button type="button" class="calendar" aria-label="Выбрать дату выезда в календаре"></button>
               </p>
               <div class="searching-amount-wrapper">
                 <div class="searching-amount searching-amount-adults">
                   <p>Взрослые:</p>
                   <div class="button-adults">
-                    <button type="button" class="button-minus"></button>
-                    <input type="text" name="number" value="2">
-                    <button type="button" class="button-plus"></button>
+                    <button type="button" class="button-minus" aria-label="Уменьшить количество взрослых"></button>
+                    <label for="adults" aria-label="Указать количество взрослых"></label>
+                    <input type="text" name="number" id="adults" value="2">
+                    <button type="button" class="button-plus" aria-label="Увеличить количество взрослых"></button>
                   </div>
                 </div>
                 <div class="searching-amount searching-amount-children">
                   <p>Дети:</p>
                   <div class="button-children">
-                    <button type="button" class="button-minus"></button>
-                    <input type="text" name="number" value="0">
-                    <button type="button" class="button-plus"></button>
+                    <button type="button" class="button-minus" aria-label="Уменьшить количество детей"></button>
+                    <label for="children" aria-label="Указать количество детей"></label>
+                    <input type="text" name="number" id="children" value="0">
+                    <button type="button" class="button-plus" aria-label="Увеличить количество детей"></button>
                   </div>
                 </div>
               </div>
@@ -153,7 +155,7 @@
                   fill="white" />
               </svg>
             </a>
-          </li>
+          </li>          
           <li>
             <a class="social-button social-button_2" href="#" aria-label="Логотип Facebook">
               <svg aria-hidden="true" focusable="false" width="12" height="22" viewBox="0 0 12 22" fill="none"
@@ -161,7 +163,7 @@
                 <path d="M12 4V0H8C5.79086 0 4 1.79086 4 4V8H0V12H4V22H8V12H12V8H8V4H12Z" fill="white" />
               </svg>
             </a>
-          </li>
+          </li>          
           <li>
             <a class="social-button social-button_3" href="#" aria-label="Логотип YouTube">
               <svg aria-hidden="true" focusable="false" width="20" height="16" viewBox="0 0 20 16" fill="none"
