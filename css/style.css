@@ -478,11 +478,9 @@ img {
 
 .type-of-hotel, 
 .type-of-rating {
-    background-image: url(../img/line-by-rating.svg);
-    background-repeat: repeat-x;
-    background-position-y: bottom;
     color: var(--opacity-black);
     padding-bottom: 2px;
+    border-bottom: 1px dotted var(--basic-blue);
 }
 
 .sort-item {
@@ -498,17 +496,15 @@ img {
 }
 
 .type-of-price:hover {
-    background-image: url(../img/line-by-rating.svg);
-    background-repeat: repeat-x;
-    background-position-y: bottom;
     padding-bottom: 2px;
+    border-bottom: 1px dotted var(--basic-blue);
 }
 
 .type-of-price:active,
 .type-of-hotel:active,
 .type-of-rating:active {
     color: var(--basic-black);
-    background: none;
+    border: none;
 }
 
 .option .sort-current {
