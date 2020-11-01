@@ -554,6 +554,10 @@ img {
     margin: 0;
 }
 
+.numbers {
+    color: var(--basic-dark-grey);
+}
+
 .feature-city {
     margin: 0;
     list-style: none;
